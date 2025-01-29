@@ -1,2 +1,3 @@
-# js-hindi-youtube
-a code repo for java script series
+#THIS IS MY 100 DAYS OF CODE CHALLANGE REPO
+          #WELCOME TO MY REPO
+          
