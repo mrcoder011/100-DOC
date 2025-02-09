@@ -41,10 +41,14 @@ class piegon : public bird
         cout << "piegon is gutering "<<endl;
 
     }
+    
+
 
 };
 int main(){
     sparrow s(1, 34,"black",3 );
+    s.age;
+
     cout<< s.color<< endl;
 
 
