@@ -27,6 +27,17 @@ void printLL(node*head){
 cout<< endl;
 
 }
+int getlength(node*head){
+    node*temp = head;
+    int count = 0;
+    while(temp !=NULL){
+count ++;
+temp = temp->next;
+
+    }
+    return count;
+
+}
 
 int main() {
    // node a;   // This will call the default constructor
@@ -34,7 +45,7 @@ int main() {
     node * first  = new node(10);
     node * second  = new node(20);
     node * third  = new node(30);
-    node * fourth = new node(40);
+    node * fourth = new node(40); 
     node * fifth  = new node(50); 
 
     first -> next = second ;
@@ -45,8 +56,7 @@ int main() {
 
 cout<< "printing the entire  LL : "<< endl;
 printLL(head);
-
-
+cout<< "length off LL is :" << getlength(head);
     return 0;
 
 }
