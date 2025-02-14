@@ -38,6 +38,21 @@ temp = temp->next;
     return count;
 
 }
+void inserthead(node* &head, int data){
+    if (head == NULL){
+        node * newnode = new node(data);
+        head = newnode;
+
+    }
+    else{
+    // create node 
+    node*newnode= new node(data);
+    //attach new node to head node
+     newnode -> next = head ;
+     // update head 
+     head = newnode;
+    }
+}
 
 int main() {
    // node a;   // This will call the default constructor
@@ -57,6 +72,9 @@ int main() {
 cout<< "printing the entire  LL : "<< endl;
 printLL(head);
 cout<< "length off LL is :" << getlength(head);
+inserthead ( head , 500);
+printLL(head);
+
     return 0;
 
 }
