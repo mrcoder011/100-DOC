@@ -31,3 +31,32 @@ public:
 
     }
 };
+
+
+// new 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int findPivot(vector<int>& arr) {
+    int totalSum = 0, leftSum = 0;
+    for (int num : arr) {
+        totalSum += num;
+    }
+    
+    for (int i = 0; i < arr.size(); i++) {
+        if (leftSum == totalSum - leftSum - arr[i]) {
+            return i; // Pivot index found
+        }
+        leftSum += arr[i];
+    }
+    
+    return -1; // No pivot index found
+}
+
+int main() {
+    vector<int> arr = {1, 7, 3, 6, 5, 6};
+    cout << "Pivot Index: " << findPivot(arr) << endl;
+    return 0;
+}
+
