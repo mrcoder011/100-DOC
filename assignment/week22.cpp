@@ -60,3 +60,30 @@ int main() {
     return 0;
 }
 
+
+
+// missing number 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int findMissingNumber(vector<int>& nums, int n) {
+    int expected_sum = (n * (n + 1)) / 2; // Sum of first N natural numbers
+    int actual_sum = 0;
+
+    for (int num : nums) {
+        actual_sum += num;
+    }
+
+    return expected_sum - actual_sum; // Missing number
+}
+
+int main() {
+    vector<int> nums = {1, 2, 4, 5, 6}; // Example: Missing number is 3
+    int n = nums.size() + 1; // Total numbers including missing one
+
+    cout << "Missing number: " << findMissingNumber(nums, n) << endl;
+
+    return 0;
+}
