@@ -3,79 +3,94 @@ using namespace std;
 
 class node {
 public:
-    int data;       // Fixed the colon ':' to semicolon ';'
+    int data;
     node *next;
 
-    node() {        // Default constructor
-     //   cout << "I am inside this default ctor" << endl;
+    node() { // Default constructor
         this->next = NULL;
     }
 
-    node(int data) {   // Parameterized constructor
-       // cout << "I am inside this default ctor" << endl;
+    node(int data) { // Parameterized constructor
         this->data = data;
         this->next = NULL;
     }
 };
-void printLL(node*head){
-    node*temp = head;
-    while (temp != NULL){
-        cout<< temp->data<< " ->";
-        temp = temp ->next;
 
+// Function to print the linked list
+void printLL(node* head) {
+    node* temp = head;
+    while (temp != NULL) {
+        cout << temp->data << " -> ";
+        temp = temp->next;
     }
-cout<< endl;
-
+    cout << "NULL" << endl;
 }
-int getlength(node*head){
-    node*temp = head;
-    int count = 0;
-    while(temp !=NULL){
-count ++;
-temp = temp->next;
 
+// Function to get the length of the linked list
+int getlength(node* head) {
+    node* temp = head;
+    int count = 0;
+    while (temp != NULL) {
+        count++;
+        temp = temp->next;
     }
     return count;
-
 }
-void inserthead(node* &head, int data){
-    if (head == NULL){
-        node * newnode = new node(data);
-        head = newnode;
 
+// Function to insert at the head of the linked list
+void inserthead(node* &head, node* &tail, int data , int position) {
+    node* newnode = new node(data);
+
+    if (head == NULL) { 
+        // If the linked list is empty, head and tail both should point to the new node
+        head = newnode;
+        tail = newnode;
+    } else {
+        // Insert at the head
+        newnode->next = head;
+        head = newnode;
     }
-    else{
-    // create node 
-    node*newnode= new node(data);
-    //attach new node to head node
-     newnode -> next = head ;
-     // update head 
-     head = newnode;
-    }
+    node * newnode = new node(data);
+    node*prev = NULL;
+    node*curr = head;
+    while(position != 1){
+        prev = curr ;
+        curr = curr-> next;
+        position --;
+
+    } 
+    prev -> next = newnode;
+    newnode -> next = curr;
+
+
 }
 
 int main() {
-   // node a;   // This will call the default constructor
-    //return 0;
-    node * first  = new node(10);
-    node * second  = new node(20);
-    node * third  = new node(30);
-    node * fourth = new node(40); 
-    node * fifth  = new node(50); 
+    // Creating nodes
+    node* first = new node(10);
+    node* second = new node(20);
+    node* third = new node(30);
+    node* fourth = new node(40);
+    node* fifth = new node(50);
 
-    first -> next = second ;
-    second -> next = third;
-    third -> next = fourth;
-    fourth -> next = fifth;
-    node*head = first;
+    // Linking nodes
+    first->next = second;
+    second->next = third;
+    third->next = fourth;
+    fourth->next = fifth;
 
-cout<< "printing the entire  LL : "<< endl;
-printLL(head);
-cout<< "length off LL is :" << getlength(head);
-inserthead ( head , 500);
-printLL(head);
+    node* head = first;
+    node* tail = fifth; // The last node is the tail
+
+    cout << "Printing the entire linked list: " << endl;
+    printLL(head);
+
+    cout << "Length of linked list: " << getlength(head) << endl;
+
+    // Inserting at head
+    inserthead(head, tail, 50 , 0);
+    cout << "After inserting 500 at the head: " << endl;
+    printLL(head);
 
     return 0;
-
 }
-
