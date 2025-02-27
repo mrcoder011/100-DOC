@@ -8,7 +8,7 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+/*class Solution {
     public:
         ListNode* reverseList(ListNode* head) {
             ListNode* prev = NULL;
@@ -25,3 +25,24 @@ class Solution {
             
         }
     };
+    */
+   class Solution {
+    public:
+        // Helper function for recursion
+        ListNode* reverseUsingRecursion(ListNode* prev, ListNode* curr) {
+            if (curr == NULL) {
+                return prev; // Base case: return new head (last node)
+            }
+            
+            ListNode* nextNode = curr->next; // Store next node
+            curr->next = prev; // Reverse current node's pointer
+            
+            // Recursive call for the next node
+            return reverseUsingRecursion(curr, nextNode);
+        }
+    
+        ListNode* reverseList(ListNode* head) {
+            return reverseUsingRecursion(NULL, head);
+        }
+    };
+    
