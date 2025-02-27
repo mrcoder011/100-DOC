@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/*int x = 2;  // Global variable
+int x = 2;  // Global variable
 
 void fun() {
     int x = 60;          // Local variable inside fun()
@@ -17,26 +17,27 @@ int main() {
     cout << x << endl;    // Prints local x (20)
     cout << ::x << endl;  // Prints modified global x (4)
 
-    fun();                // Calling the fun() function
+    fun();  // Calling the fun() function
 
-    return 0;             // Properly placed return statement
+    return 0;           // Properly placed return statement
 }
  // so in this we learned that most local will be printed first then global 
 
-*/
+
  //class
  class student{
-    /*int id;
+    int id;
     int age;
     string name ;
     int nos;
 
     void study(){
-        cout<< "studying"<< endl;
+        cout<< "studying"<< endl; 
 
-    }*/
+    }
  } ;
  int main (){
     cout<< sizeof(student)<< endl;
-
  }
+
+ 

@@ -45,7 +45,7 @@ int main() {
      myAnimal = new parrot();          // Reassigning the pointer
     myAnimal->sound();             // Output: Cat is meowing
 
-    delete myAnimal; 
+    delete myAnimal;  
 
     return 0;
 }
