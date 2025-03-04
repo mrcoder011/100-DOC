@@ -8,6 +8,8 @@ st.push(10);
 st.push(20);
 
 cout << "size of stack ->"  << st.size()<<endl;
+st.pop();
+cout << "size of after stack ->"  << st.size()<<endl;
 
     return 0;
 
