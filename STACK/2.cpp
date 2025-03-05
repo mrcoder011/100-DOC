@@ -14,12 +14,26 @@ stack(int size ){
 
 }
 void push(int data){
-    top++;
-    arr[top] = data;
-     
+    if (top == size -1){
+        cout<< "stack completly full OVERFLOW "<< endl;
+
+
+    }
+    else{
+        top++;
+        arr[top] = data;
+         
+    }
+   
 }
 void pop(){
-    top--;
+     if(top == -1){
+        cout<< "no element stack empty  "<< endl;
+
+     }
+     else{
+        top--;
+     }
 
 }
 bool isempty(){
@@ -46,10 +60,19 @@ int getsize(){
 return top+1;
 
 }
+void print(){
+    cout<< "stack:";
+    for (int i = 0 ; i <getsize(); i++){
+        cout<< arr[i] << endl;
+        cout<< endl;
+
+    }
+}
 
 };
 int main(){
 
+stack st(8);
 
     return 0;
 
