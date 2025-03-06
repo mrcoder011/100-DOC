@@ -69,6 +69,8 @@ int main() {
     st.print();
     st.pop();
     st.print();
-    
+    st.pop();
+    st.print();
+
     return 0;
-}
+} 
