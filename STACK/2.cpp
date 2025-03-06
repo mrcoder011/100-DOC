@@ -67,6 +67,8 @@ int main() {
     st.print(); 
     st.push(40);
     st.print();
+    cout<< "size of element " << st.getsize();
+     
     /*st.pop();
     st.print();
     st.pop();
@@ -80,7 +82,7 @@ int main() {
 
     return 0;*/
   
-    st.push(10);
+  /*  st.push(10);
     st.print();
     st.push(20);
     st.print();
@@ -96,4 +98,8 @@ int main() {
     st.print(); 
     st.push(40);
     st.print();
+    cout<< st.gettop();
+    cout<< st.getsize();
+
+*/
 } 
