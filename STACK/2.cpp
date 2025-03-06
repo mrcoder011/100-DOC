@@ -67,10 +67,33 @@ int main() {
     st.print(); 
     st.push(40);
     st.print();
+    /*st.pop();
+    st.print();
+    st.pop();
+    st.print();
     st.pop();
     st.print();
     st.pop();
     st.print();
+    
 
-    return 0;
+
+    return 0;*/
+  
+    st.push(10);
+    st.print();
+    st.push(20);
+    st.print();
+    st.push(30);
+    st.print(); 
+    st.push(40);
+    st.print();
+    st.push(10);
+    st.print();
+    st.push(20);
+    st.print();
+    st.push(30);
+    st.print(); 
+    st.push(40);
+    st.print();
 } 
