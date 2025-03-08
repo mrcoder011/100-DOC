@@ -19,14 +19,31 @@ insertsort(st , element) ;
 st.push(temp);
 
 }
+void sortstack(stack<int> &st ){
+    if(st.empty()){
+        return;
+
+    }
+    int temp = st.top();
+    st.pop();
+    // rec sort  
+    sortstack(st);
+
+    // bacltracking 
+    insertsort(temp);
+    
+}
 
 
 int main(){
     stack<int> st;
 
 st.push(10);
-st.push(20);
-st.push(30);
+st.push(7);
+st.push(12);
+
+st.push(5);
+st.push(11);
 //int element = 400;
 insertsort(st , 35) ;
 
