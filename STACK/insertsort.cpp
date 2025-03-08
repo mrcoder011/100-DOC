@@ -14,6 +14,8 @@ return;
 int temp = st.top();
 st.pop();
 insertsort(st , element) ;
+// backtracking 
+
 st.push(temp);
 
 }
@@ -26,7 +28,7 @@ st.push(10);
 st.push(20);
 st.push(30);
 //int element = 400;
-insertsort(st , 22) ;
+insertsort(st , 35) ;
 
 while(!st.empty()){
     cout<< st.top() << " ";
