@@ -2,7 +2,7 @@
 #include <stack>
 using namespace std;
 
-void insertsort(stack<int> &st , int &element){
+void insertsort(stack<int> &st , int element){
 if (st.empty() || element > st.top()){
 
 st.push(element);
@@ -25,9 +25,8 @@ int main(){
 st.push(10);
 st.push(20);
 st.push(30);
-int element = 400;
-
-intsertAtbottom(st,element);
+//int element = 400;
+insertsort(st , 22) ;
 
 while(!st.empty()){
     cout<< st.top() << " ";
