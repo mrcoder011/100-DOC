@@ -37,14 +37,14 @@ bool checkRedundancy(string &str){
 
 }
 int main(){
-    string str = "((a+b)*(c+d))";
+    string str = "(((a+b)*(c+d)))";
     bool ans = checkRedundancy(str);
     if (ans == true ){
-        cout<< "ans is present "<< endl;
+        cout<< "redundant bracket is present "<< endl;
 
     }
     else{
-        cout<< "ans is not present "<< endl ;
+        cout<< "redundant bracket is not present "<< endl ;
 
     }
     return 0;
