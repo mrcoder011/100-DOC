@@ -1,55 +1,58 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class MinStack {
-    public:
-    vector<pair<int , int >>st;
-    
-        MinStack() {
-        
+public:
+    vector<pair<int, int>> st;
+
+    MinStack() {}
+
+    void push(int val) {
+        if (st.empty()) {
+            st.push_back({val, val});
+        } else {
+            int currentMin = min(st.back().second, val);
+            st.push_back({val, currentMin});
         }
-        
-        void push(int val) {
-            if (st.empty()){
-                pair<int , int >  p ;
-                p.first = val;
-                p.second = val;
-                st.push_back(p);
-    
-    
-            }
-            else{
-                pair<int , int >p ;
-                p.first = val;
-                int puranamin = st.back().second;
-                p.second = min(puranamin , val);
-                st.push_back(p);
-    
-            }
-            
-        }
-        
-        void pop() {
+    }
+
+    void pop() {
+        if (!st.empty()) {
             st.pop_back();
-    
         }
-        
-        int top() {
-            pair<int , int > rightmostpair = st.back();
-            return rightmostpair.first;
-    
-            
+    }
+
+    int top() {
+        if (!st.empty()) {
+            return st.back().first;
         }
-        
-        int getMin() {
-            pair<int , int > rightmostpair = st.back();
-            return rightmostpair.second;
-    
+        return -1; // Return -1 if stack is empty
+    }
+
+    int getMin() {
+        if (!st.empty()) {
+            return st.back().second;
         }
-    };
-    
-    /**
-     * Your MinStack object will be instantiated and called as such:
-     * MinStack* obj = new MinStack();
-     * obj->push(val);
-     * obj->pop();
-     * int param_3 = obj->top();
-     * int param_4 = obj->getMin();
-     */
+        return -1; // Return -1 if stack is empty
+    }
+};
+
+// Main function to test MinStack
+int main() {
+    MinStack minStack;
+
+    minStack.push(5);
+    minStack.push(2);
+    minStack.push(8);
+    minStack.push(1);
+
+    cout << "Top element: " << minStack.top() << endl;   // Output: 1
+    cout << "Minimum element: " << minStack.getMin() << endl; // Output: 1
+
+    minStack.pop();
+    cout << "Top element after pop: " << minStack.top() << endl;   // Output: 8
+    cout << "Minimum element after pop: " << minStack.getMin() << endl; // Output: 2
+
+    return 0;
+}
