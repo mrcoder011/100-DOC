@@ -64,6 +64,14 @@ public:
         }
         return arr[front];
     }
+    int getrear(){
+        if(front == -1 && rear == -1){
+            cout << "Queue is empty" << endl;
+            return -1;
+        }
+cout<< arr[rear];
+
+    }
 
     void print() {
         if (isempty()) {
@@ -112,7 +120,7 @@ cout << "after size "<< endl;
     q.pop();
     q.print();
     cout << q.getfront() << endl;
-    
+
 
     return 0; 
 }
