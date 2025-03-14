@@ -28,9 +28,33 @@ void push(int val ){
 
 
     }
+    else{
+        // noramla case 
+        rear ++;
+        arr[rear] = val;
+
+
+    }
+    void pop() {
+        if (front == -1 && rear == -1 ){
+            cout << "queue is empty"<<endl;
+            return ;
+
+        }
+        else if (front == rear ){
+            arr[front] = -1;
+            front = -1;
+            rear = -1;
+
+
+        }
+        else{
+            arr[front] = -1;
+            front ++;
+        }
+    }
+
 }
-
-
 };
 int main(){
     queue<int> q;  
