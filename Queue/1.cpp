@@ -86,6 +86,13 @@ int main() {
     q.print();
     q.push(20);
     q.print();
+    q.push(30);
+    q.print();      
+    q.push(40);
+    q.print();
+    q.push(50);
+    q.print();
+   cout << "size "<< q.getsize() << endl;
    
 
     return 0;
