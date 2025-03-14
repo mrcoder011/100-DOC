@@ -71,7 +71,19 @@ void push(int val ){
             cout << "queue is empty"<<endl;
             return -1;
         }
-        return arr[front];
+        else{
+  return arr[front];
+        }
+      
+    }
+    void print(){
+        cout << "queue elements is :"<< endl;
+        for (int i= 0 ; i< size ; i++){
+            cout << arr[i]<< " " << endl;
+
+        }
+        cout << endl;
+        
     }
 }
 };
