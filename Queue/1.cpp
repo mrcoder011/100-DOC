@@ -66,6 +66,13 @@ void push(int val ){
     bool getsize(){
         return rear - front + 1;
     }
+    int getfront(){
+        if (front == -1 && rear == -1 ){
+            cout << "queue is empty"<<endl;
+            return -1;
+        }
+        return arr[front];
+    }
 }
 };
 int main(){
