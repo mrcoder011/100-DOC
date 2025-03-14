@@ -82,7 +82,10 @@ int main() {
     Queue q(5);
 
     q.print();
-
+    q.push(10);
+    q.print();
+    q.push(20);
+    q.print();
    
 
     return 0;
