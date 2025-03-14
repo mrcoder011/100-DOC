@@ -111,6 +111,8 @@ cout << "after size "<< endl;
     q.print();                                                                  
     q.pop();
     q.print();
+    cout << q.getfront() << endl;
+    
 
     return 0; 
 }
