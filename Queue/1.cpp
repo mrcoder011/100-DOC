@@ -98,7 +98,19 @@ int main() {
 cout << "after size "<< endl;
 
    cout << "size "<< q.getsize() << endl;
-   cout << "queue is empty or not"<< q.isempty()<< endl;
-   
-    return 0;
+   cout << "queue is empty or not"<< " "<<q.isempty()<< endl;
+   q.push(60);
+    q.print();
+        q.pop();
+    q.print();
+    q.pop();
+    q.print();  
+    q.pop();
+    q.print();
+    q.pop();
+    q.print();                                                                  
+    q.pop();
+    q.print();
+
+    return 0; 
 }
