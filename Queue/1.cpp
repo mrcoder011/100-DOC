@@ -93,7 +93,12 @@ int main() {
     q.push(50);
     q.print();
    cout << "size "<< q.getsize() << endl;
-   
+   q.pop();
+    q.print();
+cout << "after size "<< endl;
 
+   cout << "size "<< q.getsize() << endl;
+   cout << "queue is empty or not"<< q.isempty()<< endl;
+   
     return 0;
 }
