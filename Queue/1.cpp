@@ -13,6 +13,7 @@ int main(){
     cout<<q.front()<<endl;
     cout<<q.size()<<endl;
     //cout<<q.empty()<<endl;
-    cout<<q.back()<<endl;
+    cout<<q.back()<<endl; // this back element is also known as rear and last elements
+    
     return 0;
 }
