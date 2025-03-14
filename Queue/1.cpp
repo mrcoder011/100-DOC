@@ -1,7 +1,7 @@
 #include <iostream>
 #include<queue>
 using namespace std;
-class queue{
+class Queue{
 public : 
 int *arr ;
 int size ;
@@ -35,7 +35,9 @@ void push(int val ){
 
 
     }
-    void pop() {
+   
+    }
+     void pop() {
         if (front == -1 && rear == -1 ){
             cout << "queue is empty"<<endl;
             return ;
@@ -52,8 +54,7 @@ void push(int val ){
             arr[front] = -1;
             front ++;
         }
-    }
- bool isempty {
+ bool isempty() {
     if (front == -1 && rear == -1 ){
         return true ;
      
@@ -63,7 +64,7 @@ void push(int val ){
             
         }
     }
-    bool getsize(){
+    int getsize(){
         return rear - front + 1;
     }
     int getfront(){
@@ -90,8 +91,8 @@ void push(int val ){
 int main(){
     queue q(5);
     q.print();
-    
+
     // this back element is also known as rear and last elements
     
     return 0;
-}
+};
