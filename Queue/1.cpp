@@ -1,98 +1,89 @@
 #include <iostream>
-#include<queue>
+#include <queue>
 using namespace std;
-class Queue{
-public : 
-int *arr ;
-int size ;
-int front ;
-int rear ;
 
-queue(int size ){
-    arr = new int[size];
-    this-> size = size ;
-    front = -1;
-    rear = -1;
+class Queue {
+public:
+    int *arr;
+    int size;
+    int front;
+    int rear;
 
-}
-void push(int val ){
-    if (rear == size -1 ){
-        cout << "Queue is full"<<endl;
-        return ;
+    Queue(int size) {
+        arr = new int[size];
+        this->size = size;
+        front = -1;
+        rear = -1;
     }
-    else if(front == -1 && rear == -1 ){
-        front ++;
-        rear ++;
-        arr[rear] = val;
-        
 
-
-    }
-    else{
-        // noramla case 
-        rear ++;
-        arr[rear] = val;
-
-
-    }
-   
-    }
-     void pop() {
-        if (front == -1 && rear == -1 ){
-            cout << "queue is empty"<<endl;
-            return ;
-
+    void push(int val) {
+        if (rear == size - 1) {
+            cout << "Queue is full" << endl;
+            return;
+        } 
+        else if (front == -1 && rear == -1) {
+            front++;
+            rear++;
+            arr[rear] = val;
+        } 
+        else {
+            rear++;
+            arr[rear] = val;
         }
-        else if (front == rear ){
+    }
+
+    void pop() {
+        if (front == -1 && rear == -1) {
+            cout << "Queue is empty" << endl;
+            return;
+        } 
+        else if (front == rear) {
             arr[front] = -1;
             front = -1;
             rear = -1;
-
-
-        }
-        else{
+        } 
+        else {
             arr[front] = -1;
-            front ++;
-        }
- bool isempty() {
-    if (front == -1 && rear == -1 ){
-        return true ;
-     
- }
-    else {
-            return false ;
-            
+            front++;
         }
     }
-    int getsize(){
+
+    bool isempty() {
+        return (front == -1 && rear == -1);
+    }
+
+    int getsize() {
+        if (front == -1 && rear == -1) return 0;
         return rear - front + 1;
     }
-    int getfront(){
-        if (front == -1 && rear == -1 ){
-            cout << "queue is empty"<<endl;
+
+    int getfront() {
+        if (front == -1 && rear == -1) {
+            cout << "Queue is empty" << endl;
             return -1;
         }
-        else{
-  return arr[front];
-        }
-      
+        return arr[front];
     }
-    void print(){
-        cout << "queue elements is :"<< endl;
-        for (int i= 0 ; i< size ; i++){
-            cout << arr[i]<< " " << endl;
 
+    void print() {
+        if (isempty()) {
+            cout << "Queue is empty" << endl;
+            return;
+        }
+        cout << "Queue elements: ";
+        for (int i = front; i <= rear; i++) {
+            cout << arr[i] << " ";
         }
         cout << endl;
-
     }
-}
 };
-int main(){
-    queue q(5);
+
+int main() {
+    Queue q(5);
+
     q.print();
 
-    // this back element is also known as rear and last elements
-    
+   
+
     return 0;
-};
+}
