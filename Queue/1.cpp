@@ -63,6 +63,9 @@ void push(int val ){
             
         }
     }
+    bool getsize(){
+        return rear - front + 1;
+    }
 }
 };
 int main(){
