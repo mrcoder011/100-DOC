@@ -23,7 +23,11 @@ public:
         // circular condition
  // normal condition
 
- if (front == 0 && rear == size -1 ){}
+ if (front == 0 && rear == size -1 ){
+    cout << "Queue is full" << endl;
+    return;
+    
+ }
     }
 }
 int main(){
