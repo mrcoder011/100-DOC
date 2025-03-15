@@ -36,8 +36,14 @@ public:
     else if  ( rear == size -1 && front != 0){
         rear = 0;
         arr[rear ] = val;
-        
+
     }
+    else {
+        rear++;
+        arr[rear] = val;
+    }
+    }
+
 }
 int main(){
 
