@@ -43,6 +43,20 @@ public:
         arr[rear] = val;
     }
     }
+    void pop(){
+        // underflow 
+// empty condition
+// circular condition
+// normal condition
+if (front == -1 && rear == -1){
+    cout << "Queue is empty" << endl;
+    return;
+}
+else if (front == rear ){
+    
+}
+        //
+    }
 
 }
 int main(){
