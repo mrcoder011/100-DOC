@@ -42,6 +42,28 @@ public:
 
         arr[rear] = val;
     }
+    void pop() {
+        // Underflow condition
+        if (front == -1) {
+            cout << "Queue is empty" << endl;
+            return;
+        }
+
+        arr[front] = 0;
+
+        // Single element condition
+        if (front == rear) {
+            front = rear = -1;
+        }
+        // Circular condition
+        else if (front == size - 1) {
+            front = 0;
+        }
+        // Normal condition
+        else {
+            front++;
+        }
+    }
 
     void print() {
         cout << "Printing Queue: ";
@@ -73,7 +95,9 @@ int main() {
     q.print();  // Prints: 10 20 30 40 50
     q.push(60);  // Prints: Queue is full
     q.print();  // Prints: 10 20 30 40 50
-    
+    q.pop();
+    q.print();  // Prints: 0 20 30 40 50    
+
 
     return 0;
 }
