@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -69,7 +70,7 @@ public:
         }
     }
 
-    bool isempty() {
+    /*bool isempty() {
         return (front == -1 && rear == -1);
     }
 
@@ -93,13 +94,16 @@ public:
         }
         return arr[rear];
     }
-
+*/
     void print() {
-        if (isempty()) {
-            cout << "Queue is empty" << endl;
-            return;
+       cout << "printing queue" << endl;
+       for(int i=0;i<size;i++){
+           cout << arr[i] << " ";
+
         }
-        cout << "Queue elements: ";
+        cout << endl;
+    }
+     /* cout << "Queue elements: ";
         if (front <= rear) {
             for (int i = front; i <= rear; i++) {
                 cout << arr[i] << " ";
@@ -113,7 +117,7 @@ public:
             }
         }
         cout << endl;
-    }
+    }*/
 };
 
 int main() {
