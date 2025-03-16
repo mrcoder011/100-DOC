@@ -96,8 +96,22 @@ int main() {
     q.push(60);  // Prints: Queue is full
     q.print();  // Prints: 10 20 30 40 50
     q.pop();
-    q.print();  // Prints: 0 20 30 40 50   
+    q.print(); 
+    q.pop();
+    q.print();
+    q.pop();
+    q.print();
+    q.pop();
+    q.print();   
     q.push(160); 
+    q.print();  // Prints: 160 20 30 40 50
+    q.push(170);
+    q.print();  // Prints: 160 170 30 40 5
+    q.push(180);
+    q.print();  // Prints: 160 170 180 40 50
+    q.push(190);
+    q.print();  // Prints: 160 170 180 190 50
+    q.push(200);  // Prints: Queue is full
 q.print();  // Prints: 160 20 30 40 50
 
 
