@@ -71,6 +71,9 @@ int main() {
 
     q.push(50);
     q.print();  // Prints: 10 20 30 40 50
+    q.push(60);  // Prints: Queue is full
+    q.print();  // Prints: 10 20 30 40 50
+    
 
     return 0;
 }
