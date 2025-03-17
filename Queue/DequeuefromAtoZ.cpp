@@ -31,7 +31,12 @@ class Deque {
 
     }
     else {
-        if (fr)
+        // rear ke case me rear ko aage laate h or phir insert krte h 
+        // front ke case me front ko piche laate h or phir insert krte h
+
+        front--;
+        arr[front] = val;
+
     }
 
     
@@ -58,6 +63,19 @@ arr[rear] = val;
     }
     }
     void PopFront(){
+        if (front == -1 && rear == -1) {
+            cout << "Queue is empty" << endl;
+            return;
+        } 
+        else if (front == rear) {
+            arr[front] = -1;
+            front = -1;
+            rear = -1;
+        } 
+        else {
+            arr[front] = -1;
+            front++;
+        }
     
     }
     void PopBack(){
