@@ -123,6 +123,9 @@ int main() {
     dq.PushBack(30);
     dq.PushBack(40);
    dq.PushBack(50);
+   dq.PopBack();
+   dq.PopFront();
+   dq.PushFront(60);
     
     dq.print(); // Display the queue
     
