@@ -9,5 +9,8 @@ int main (){
  dq.push_back(10);
     dq.push_back(20);
     cout << dq.size() << endl;
+    cout << dq.front() << endl;
+    
+
 
 }
