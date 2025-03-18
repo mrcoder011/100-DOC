@@ -4,9 +4,28 @@
 using namespace std;
 void reversefirstk( queue<int> &q, int k){
     // push first k elewments in stack
-    // push all k element into queue
-    // pop  and push first (n-k) elements in queue again 
+    stack<int > s;
+    for (int i = 0; i<k; i++){
+        int temp = q.front();
+        q.pop();
+        s.push(temp);
 
+    }
+    // push all k element into queue
+    while(!s.empty()){
+        int temp = s.top();
+        s.pop();
+        q.push(temp);
+
+    }
+    // pop  and push first (n-k) elements in queue again 
+for (int i=0; i<(n-k); i++){
+    int temp = q.front();
+    q.pop();
+    q.push(temp);
+    
+
+}
 
 }
 
