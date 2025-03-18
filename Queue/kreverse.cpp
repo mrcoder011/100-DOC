@@ -38,7 +38,7 @@ int main(){
     q.push(30);
     q.push(40);
     q.push(50);
-    reversefirstk(q, 3);
+    reversefirstk(q, 4);
     while (!q.empty()) {
         cout << q.front() << " ";
         q.pop();
