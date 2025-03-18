@@ -1,16 +1,44 @@
 #include <iostream>
 #include <queue>
-#include <stack>
 using namespace std;
-int main(){
-    void Interleave(queue<int> &q){
-        
+
+// Interleave function defined outside main
+void Interleave(queue<int> &first) {
+    queue<int> second;
+    int size = first.size();
+    int half = size / 2;
+
+    // Push the first half elements into second queue
+    for (int i = 0; i < half; i++) {
+        int temp = first.front();
+        first.pop();
+        second.push(temp);
     }
-queue<int> q;
-q.push(11);
-q.push(12);
-q.push(13);
-q.push(14);
-q.push(15);
-q.push(16);
-};
+
+    // Interleave both queues
+    while (!second.empty()) {
+        first.push(second.front());
+        second.pop();
+
+        first.push(first.front());
+        first.pop();
+    }
+}
+
+int main() {
+    queue<int> q;
+    q.push(11);
+    q.push(12);
+    q.push(13);
+    q.push(14);
+    q.push(15);
+    q.push(16);
+
+    Interleave(q);
+
+    // Print interleaved queue
+    while (!q.empty()) {
+        cout << q.front() << " ";
+        q.pop();
+    }
+}
