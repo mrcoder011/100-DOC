@@ -20,6 +20,8 @@ void reverseQueue(queue<int> &q) {
 }
 
 void reverse(queue<int> &q) {
+    // base case 
+    
     if (q.empty()) {
         return;
     }

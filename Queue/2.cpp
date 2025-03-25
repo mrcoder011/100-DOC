@@ -22,6 +22,8 @@ public:
 
     void push(int val) {
         // Overflow condition
+        // yha glty krte hai log 
+
         if ((front == 0 && rear == size - 1) || (rear == front - 1)) {
             cout << "Queue is full" << endl;
             return;
@@ -52,6 +54,7 @@ public:
         arr[front] = 0;
 
         // Single element condition
+        // yeh case bhool jaate hai log
         if (front == rear) {
             front = rear = -1;
         }
@@ -113,6 +116,7 @@ int main() {
     q.print();  // Prints: 160 170 180 190 50
     q.push(200);  // Prints: Queue is full
 q.print();  // Prints: 160 20 30 40 50
+
 
 
     return 0;
