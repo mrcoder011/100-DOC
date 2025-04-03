@@ -8,5 +8,6 @@
         "array": "cpp",
         "deque": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "deepscan.enable": true
 }

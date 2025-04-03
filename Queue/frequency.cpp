@@ -28,7 +28,7 @@ break;
 
         }
         if(q.empty()){
-            cout << "#" << endl;
+            cout << "#" << endl; 
         }
     }
     return 0;
