@@ -1,39 +1,43 @@
 #include <iostream>
 using namespace std;
-class node 
-{
+
+class node {
 public:
-int data;
-node *left;
-node *right;
-node(int val){
-    this ->data = val;
-    this->left = NULL;
-    this->right = NULL;
-};
-
-// it return root node of created tree
-
-node*createtree(){
-    cout << "enter the data" << endl;
     int data;
-    cin>> data;
-    if(data == -1){
-        return NULL;
-    }// step 1 done 
+    node *left;
+    node *right;
 
-    node*newnode = new node(data);
-// step create left subtree 
-// step 3 create right subtree 
-    newnode->left = createtree();
-    newnode->right = createtree();
-    return newnode;
-
-}
+    node(int val) {
+        this->data = val;
+        this->left = NULL;
+        this->right = NULL;
+    }
 };
-int main (){
-    node*root = createtree();
-    cout<< root->data << endl;
-    return 0;
 
+// Function to create the tree
+node* createtree() {
+    cout << "Enter the data: ";
+    int data;
+    cin >> data;
+
+    if (data == -1) {
+        return NULL;
+    }
+
+    node* root = new node(data);
+
+    // Create left subtree
+    cout << "Enter the data for left of " << data << ": ";
+    root->left = createtree();
+
+    // Create right subtree
+    cout << "Enter the data for right of " << data << ": ";
+    root->right = createtree();
+
+    return root;
+}
+
+int main() {
+    node* root = createtree();
+    return 0;
 }
