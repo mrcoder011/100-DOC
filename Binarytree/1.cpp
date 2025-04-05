@@ -51,6 +51,22 @@ void preorderTraversal(node *root) {
 
     // R - Right
     preorderTraversal(root->right);
+
+    // inorder tanversal is LNR
+    void inorderTraversal(node *root) {
+        if(root == NULL)
+{
+    return;
+} 
+// L
+inorderTraversal(root->left);
+
+//N
+cout<< root->data<< " ";
+//R
+inorderTraversal(root->right);
+
+}    .
 }
 
 int main() {
@@ -58,6 +74,9 @@ int main() {
 
     cout << "\nPreorder Traversal: ";
     preorderTraversal(root);
+    cout << endl;
+    inorderTraversal(root);
+    cout << endl;
 
     return 0;
 }
