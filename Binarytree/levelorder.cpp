@@ -38,10 +38,12 @@ node* createtree() {
 
 // Function for Level Order Traversal
 void levelorderTraversal(node* root) {
+    // ek level complete ho gya
     if (root == NULL) return;
 
     queue<node*> q;
     q.push(root);
+    q.push(NULL); // marker for end of level
 
     while (!q.empty()) {
         node* front = q.front();
