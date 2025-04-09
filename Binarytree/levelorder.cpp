@@ -38,44 +38,38 @@ node* createtree() {
 
 // Function for Level Order Traversal
 void levelorderTraversal(node* root) {
-    // ek level complete ho gya
     if (root == NULL) return;
 
     queue<node*> q;
     q.push(root);
     q.push(NULL); // marker for end of level
 
-    while (!q.empty()) {
+    while (q.size()> 1 ) {
         node* front = q.front();
         q.pop();
-         if ( front == NULL){
-cout << endl;
-q.push(NULL);
 
-
-         }
-         else{
-            // valid 
+        if (front == NULL) {
+            cout << endl;
+            if (!q.empty()) {
+                q.push(NULL); // only push NULL if there are more nodes
+            }
+        } else {
             cout << front->data << " ";
 
-        if (front->left != NULL) {
-            q.push(front->left);
-        }
+            if (front->left != NULL) {
+                q.push(front->left);
+            }
 
-        if (front->right != NULL) {
-            q.push(front->right);
+            if (front->right != NULL) {
+                q.push(front->right);
+            }
         }
     }
+}
 
-
-            
-         }
-         }
-
-        
 int main() {
     node* root = createtree();
-    cout << "\nLevel Order Traversal: ";
+    cout << "\nLevel Order Traversal: \n";
     levelorderTraversal(root);
     return 0;
-};
+}
