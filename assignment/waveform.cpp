@@ -49,4 +49,4 @@ int main() {
     
     wavePrint(v);
     return 0;
-}
+};
