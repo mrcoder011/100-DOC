@@ -14,11 +14,33 @@ class Solution {
     
              while (count < totalelement){
                 // print starting element ;
-                for ( int i = startcol; i< endcol; i++ ){
-                           ans.push_back(startrow[i])
+                for ( int i = startcol; i<=endcol; i++ ){
+                           ans.push_back (matrix [startrow][i]) ;
+    
                         }
-                        
-                cout << 
+                        startrow++;
+                     // end col   
+                  for ( int i = startrow; i<= endrow; i++){
+                           ans.push_back (matrix [i][endcol]) ;
+    
+                           
+                        }
+                        endcol--; 
+                        // endrow
+                         for ( int i = endcol; i<=startcol; i--){
+                           ans.push_back (matrix [endrow]][i]) ;
+                           
+                           
+                        }
+                        endrow--;
+                        //startcol
+                         for ( int i = endrow; i<= startrow-1; i--){
+                           ans.push_back (matrix [i][startcol]) ;
+                           
+                           
+                        }
+                        startcol++;
+                         
              }
     
         }
