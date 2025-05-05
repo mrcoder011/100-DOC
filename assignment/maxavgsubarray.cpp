@@ -16,4 +16,4 @@ class Solution {
             return bruteforce(nums, k);
         }
          
-    }
+    };
