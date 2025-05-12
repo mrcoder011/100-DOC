@@ -94,3 +94,11 @@ class Solution {
         return ans;
     }
 };
+// new method
+    double findMaxAverage(vector<int>& nums, int k) {
+        return slidingWindow(nums, k);
+    };
+    // new method
+    double findMaxAverage(vector<int>& nums, int k) {
+        return slidingWindow(nums, k);
+    };
