@@ -32,6 +32,6 @@ class Solution {
             maxAvg = max(maxAvg, sum / (double)k);
         }
         
-        return maxAvg
+        return maxAvg;
     };
    
