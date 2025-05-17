@@ -14,3 +14,6 @@ class Node{
         this->right = NULL;
     }
 };
+void topview(Node*root){
+    map<int,int>top;
+}
