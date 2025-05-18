@@ -34,4 +34,13 @@ class Solution {
         
         return maxAvg;
     };
+    // Example usage
+    int main() {
+        Solution solution;
+        vector<int> nums = {1, 12, -5, -6, 50, 3};
+        int k = 4;
+        double result = solution.findMaxAverage(nums, k);
+        cout << "Maximum average subarray of length " << k << " is: " << result << endl;
+        return 0;
+    };
    
