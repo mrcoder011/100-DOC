@@ -13,3 +13,12 @@ public:
         return count;
     }
 };
+// Example usage
+int main() {
+    Solution solution;
+    vector<int> nums = {1, 2, 3, 4, 5};
+    int k = 2;
+    int result = solution.findPairs(nums, k);
+    cout << "Number of unique pairs with difference " << k << " is: " << result << endl;
+    return 0;
+}
