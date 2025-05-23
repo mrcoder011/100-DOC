@@ -12,7 +12,7 @@ public:
         }
         return count;
     }
-};
+}
 // Example usage
 int main() {
     Solution solution;
