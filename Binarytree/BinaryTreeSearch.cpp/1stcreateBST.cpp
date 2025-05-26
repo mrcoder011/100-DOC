@@ -61,3 +61,17 @@ void inorder(Node* root) {
     cout << root->data << " ";
     inorder(root->right);
 }
+Node*Minvalue(Node* root) {
+    if (root == NULL) return NULL;
+    while (root->left != NULL) {
+        root = root->left;
+    }
+    return root;
+}
+Node*Maxvalue(Node* root) {
+    if (root == NULL) return NULL;
+    while (root->right != NULL) {
+        root = root->right;
+    }
+    return root;
+}
