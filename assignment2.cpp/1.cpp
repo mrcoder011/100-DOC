@@ -12,7 +12,7 @@ public:
         }
         return count;
     }
-}
+
 // Example usage
 int main() {
     Solution solution;
@@ -21,4 +21,4 @@ int main() {
     int result = solution.findPairs(nums, k);
     cout << "Number of unique pairs with difference " << k << " is: " << result << endl;
     return 0;
-}
+};
