@@ -46,3 +46,18 @@ Node*root = createBST()
     return 0;
 
 }
+// preorder traversal of the BST
+
+void preorder(Node* root) {
+    if (root == NULL) return;
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+// inorder traversal of the BST // LNR
+void inorder(Node* root) {
+    if (root == NULL) return;
+    inorder(root->left);
+    cout << root->data << " ";
+    inorder(root->right);
+}
