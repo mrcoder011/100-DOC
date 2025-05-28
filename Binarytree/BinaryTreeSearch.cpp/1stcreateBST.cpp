@@ -74,4 +74,10 @@ Node*Maxvalue(Node* root) {
         root = root->right;
     }
     return root;
+};
+// search a node in the BST
+Node*search(Node* root, int data) {
+    if (root == NULL || root->data == data) return root;
+    if (data < root->data) return search(root->left, data);
+    return search(root->right, data);
 }
