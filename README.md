@@ -2,7 +2,7 @@
 
 **Welcome to my 100 Days of Code journey!**
 
-This repository is a personal log of my commitment to solving **Data Structures and Algorithms (DSA)** problems daily. The goal is to improve my problem-solving skills, consistency, and coding efficiency.
+This repository is a personal log of my commitment to solving **Data Structures and Algorithms (DSA)** problems daily. The goal is to improve problem-solving skills, consistency, and coding efficiency.
 
 ## About This Repository
 - Solving one or more DSA problems every day.
