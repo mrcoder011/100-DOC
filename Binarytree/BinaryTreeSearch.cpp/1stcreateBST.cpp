@@ -77,6 +77,17 @@ Node* Maxvalue(Node* root) {
     return root;
 }
 
+// Search in BST
+bool searchinBST(Node* root, int target) {
+    if (root == NULL) return false;
+    if (root->data == target) return true;
+    if (target > root->data) {
+        return searchinBST(root->right, target);
+    } else {
+        return searchinBST(root->left, target);
+    }
+}
+
 int main() {
     Node* root = NULL;
     createBST(root);
@@ -94,5 +105,16 @@ int main() {
         cout << "\nMaximum Value in BST: " << maxNode->data;
     }
 
+    // Using searchinBST
+    int key;
+    cout << "\n\nEnter value to search in BST: ";
+    cin >> key;
+
+    if (searchinBST(root, key)) {
+        cout << "Value " << key << " is found in the BST.\n";
+    } else {
+        cout << "Value " << key << " is NOT found in the BST.\n";
+    }
+
     return 0;
-};
+}
