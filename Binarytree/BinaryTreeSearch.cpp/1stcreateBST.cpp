@@ -87,6 +87,50 @@ bool searchinBST(Node* root, int target) {
         return searchinBST(root->left, target);
     }
 }
+Node* deletefromBST(Node* root , target ){
+    if (root == NULL) {
+        return NULL;
+    }
+   
+    }
+    if (root-> data == target  ){
+// ab delete krege 
+// yha pr 4 case likhege 
+if (root -> left == NULL && root->right == NULL ){
+   delete root ;
+    return NULL;
+}
+else if(root ->left !=NULL && root ->right == NULL){
+    Node*childSubtree =  root -> left ;
+    delete root ;
+    return childSubtree;
+
+}
+else if (root ->left == NULL && root -> right != NULL){
+    Node*childSubtree = root -> right ;
+    delete root ;
+    return childSubtree ;
+
+}
+else  {
+    
+
+}
+// case 4
+
+    }
+// target found
+else if(root -> data > target ){
+ return deletefromBST(root->left , target );
+
+} 
+else {
+    return deletefromBST(root->right , target );
+
+} 
+return root ;
+
+
 
 int main() {
     Node* root = NULL;
